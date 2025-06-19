@@ -1,6 +1,6 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const Amulet = require('./models/amulet');
+import express from 'express';
+import mongoose from 'mongoose';
+import Amulet from './src/models/amulet.js';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
