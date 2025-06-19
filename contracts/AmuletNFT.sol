@@ -19,8 +19,9 @@ contract AmuletNFT is ERC721, Ownable {
 
     // Override base URI to fetch metadata
     function _baseURI() internal view override returns (string memory) {
-        // ในสภาพแวดล้อมจริง URL นี้ควรชี้ไปที่ Backend API ของคุณ เช่น "https://api.buchaphra.com/metadata/"
-        return "https://api.buchaphra.com/metadata/"; // เปลี่ยนเป็น Base URL ของ Metadata API ของคุณ
+        // ในสภาพแวดล้อมจริง URL นี้ควรชี้ไปที่ Backend API ของคุณ
+        // เช่น "https://api.buchaphra.com/metadata/" หรือ "ipfs://..."
+        return "YOUR_API_METADATA_BASE_URL/"; // <-- สำคัญ: เปลี่ยนเป็น Base URL ของ Metadata API ของคุณ
     }
 
     // Function to mint a new NFT
