@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const AmuletSchema = new mongoose.Schema({
   name: String,
@@ -11,4 +11,4 @@ const AmuletSchema = new mongoose.Schema({
   currentPrice: Number,
 });
 
-module.exports = mongoose.models.Amulet || mongoose.model('Amulet', AmuletSchema);
+export default mongoose.models.Amulet || mongoose.model('Amulet', AmuletSchema);
