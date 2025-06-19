@@ -4,7 +4,9 @@ async function main() {
   // ตรวจสอบให้แน่ใจว่าได้เปลี่ยนชื่อ Contract ของคุณตามที่ถูกต้อง
   const AmuletNFT = await hre.ethers.getContractFactory("AmuletNFT");
   // initialOwner คือ address ของ deployer หรือ address ที่คุณต้องการให้เป็นเจ้าของสัญญา
-  const amuletNFT = await AmuletNFT.deploy(process.env.WALLET_ADDRESS_FOR_OWNERSHIP);
+  const initialOwner = process.env.WALLET_ADDRESS_FOR_OWNERSHIP;
+  const baseURI = process.env.NFT_METADATA_BASE_URL || "";
+  const amuletNFT = await AmuletNFT.deploy(initialOwner, baseURI);
 
   await amuletNFT.waitForDeployment();
 
