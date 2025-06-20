@@ -1,33 +1,31 @@
-# BuchaPhra Project
+# BuchaPhra NFT Marketplace
 
-This repository provides a monorepo-style structure with separate frontend and backend packages.
+A monorepo containing a Next.js frontend and a lightweight Express-style backend.
+Mock data resides in the `mock` folder.
 
-- `frontend` contains the Next.js application.
-- `backend` contains the Express.js API server.
-- `mock` stores mock data and utilities.
+## Setup
 
-Continuous integration is configured via GitHub Actions in `.github/workflows/ci.yml`.
+### Frontend
+```
+cd frontend && npm install && npm run dev
+```
 
-## Development
-
-Run each package independently:
-
-```bash
-cd frontend
-npm install
+### Backend
+```
+cd backend && npm install
+export MONGO_URI=your_mongo
 npm run dev
 ```
 
-To run the smoke tests for both packages, execute from the repository root:
+## Folder Structure
+- frontend/ — Next.js App Router
+- backend/ — Express + MongoDB API
+- mock/ — sample data JSON
 
-```bash
-npm test
-```
+## CI
+GitHub Actions รัน tests ทั้ง FE และ BE
 
-```bash
-cd backend
-npm install
-npm run dev
-```
-
-The frontend runs on [http://localhost:3000](http://localhost:3000) by default and the backend listens on port `3001`.
+## Features
+- Auction, Bids (Web3), Crop, Price Chart (Recharts), Logistics UI
+- Custom Web3 hook `useWeb3Auction`
+- Order and PriceHistory models with example routes

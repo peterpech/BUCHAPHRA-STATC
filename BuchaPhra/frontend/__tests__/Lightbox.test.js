@@ -1,0 +1,5 @@
+const fs = require('fs')
+const path = require('path')
+const file = path.join(__dirname, '..', 'components', 'Lightbox.tsx')
+if (!fs.existsSync(file)) throw new Error('Lightbox component missing')
+console.log('Lightbox component exists')

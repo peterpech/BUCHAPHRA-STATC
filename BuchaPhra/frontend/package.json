@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "node __tests__/smoke.test.js"
+    "test": "node __tests__/smoke.test.js && node __tests__/Lightbox.test.js"
   },
   "dependencies": {
     "next": "15.3.4",
