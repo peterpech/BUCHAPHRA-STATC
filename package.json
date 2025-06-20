@@ -1,16 +1,12 @@
 {
-  "name": "frontend",
-  "version": "0.1.0",
+  "name": "buchaphra-monorepo",
+  "version": "1.0.0",
   "private": true,
   "workspaces": [
     "BuchaPhra/frontend",
     "BuchaPhra/backend"
   ],
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
     "test": "npm --workspace BuchaPhra/backend test && npm --workspace BuchaPhra/frontend test"
   },
   "dependencies": {
