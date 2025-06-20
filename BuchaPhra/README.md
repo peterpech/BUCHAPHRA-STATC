@@ -18,6 +18,12 @@ npm install
 npm run dev
 ```
 
+To run the smoke tests for both packages, execute from the repository root:
+
+```bash
+npm test
+```
+
 ```bash
 cd backend
 npm install
